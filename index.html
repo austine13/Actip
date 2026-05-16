@@ -9,10 +9,10 @@
 <body>
     <header>
         <nav class="main-nav">
-            <a href="#" class="nav-btn">Home page</a>
-            <a href="#" class="nav-btn">About us</a>
-            <a href="#" class="nav-btn">Gallery</a>
-            <a href="#" class="nav-btn">Contact us</a>
+            <a href="index.html" class="nav-btn">Home page</a>
+            <a href="about.html" class="nav-btn">About us</a>
+            <a href="gallery.html" class="nav-btn">Gallery</a>
+            <a href="contact.html" class="nav-btn">Contact us</a>
         </nav>
         <div class="container">
             <h1>ACTIP</h1>
@@ -21,15 +21,77 @@
         </div>
     </header>
     <main>
+        <section class="intro-section">
+            <p class="intro-text">
+                ACTIP is a registered community based organization that was established in 2023 and officially registered in 2025, dedicated to bridging the digital divide by equipping women, youth and persons with disabilities (PWDs) with inclusive and practical ICT skills. Founded to promote social and economic empowerment through technology, ACTIP implements trainings programs, community outreach, and digital inclusion initiatives across Eastern Uganda and beyond.
+            </p>
+        </section>
         <section class="mission-highlights">
             <h2>Mission Highlights</h2>
-            <p>ACTIP is a registered community based organization that was established in 2023 and officially registered in 2025, dedicated to bridging the digital divide by equipping women, youth and persons with disabilities (PWDs) with inclusive and practical ICT skills. Founded to promote social and economic empowerment through technology, ACTIP implements trainings programs, community outreach, and digital inclusion initiatives across Eastern Uganda and beyond.</p>
-            <ul>
-                <li>Community empowerment programs</li>
-                <li>Skills training</li>
-                <li>Community outreach</li>
-                <li>Advocacy & partnerships</li>
-            </ul>
+            <div class="mission-cards">
+                <div class="flip-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="emoji">🌍</span>
+                            <h3>Community Empowerment Programs</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p><strong>“Building stronger communities through inclusive innovation.”</strong></p>
+                            <p>ACTIP designs holistic initiatives that address local needs, from digital literacy to sustainable livelihoods. These programs foster resilience, equity, and participation, ensuring that marginalized groups are not left behind in the digital age.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="emoji">🎓</span>
+                            <h3>Skills Training</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p><strong>“Practical skills for real opportunities.”</strong></p>
+                            <p>Hands‑on workshops, mentorship, and digital modules equip youth, women, and persons with disabilities with market‑relevant skills. Training spans ICT, entrepreneurship, and vocational expertise, opening pathways to employment and self‑reliance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="emoji">🤝</span>
+                            <h3>Community Outreach</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p><strong>“Connecting, listening, and transforming together.”</strong></p>
+                            <p>Through grassroots engagement, ACTIP reaches rural and urban communities with awareness campaigns, mobile clinics, and digital advisory services. Outreach activities amplify voices, share knowledge, and strengthen social bonds.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" tabindex="0">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="emoji">📢</span>
+                            <h3>Advocacy & Partnerships</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <p><strong>“Championing inclusion through collaboration.”</strong></p>
+                            <p>ACTIP advocates for policies that promote digital inclusion and partners with governments, NGOs, and private sector actors. These alliances drive systemic change, mobilize resources, and scale impact across regions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            // Flip card on click or Enter/Space
+            document.querySelectorAll('.flip-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('flipped');
+                });
+                card.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.classList.toggle('flipped');
+                    }
+                });
+            });
+            </script>
         </section>
         <section class="featured-programs">
             <h2>Featured Programs</h2>
@@ -46,23 +108,50 @@
             </div>
         </section>
         <section class="impact-stats">
-            <h2>Impact Stats</h2>
+            <h2>Impact Highlights</h2>
             <div class="stats-grid">
                 <div class="stat">
-                    <span class="number">2000+</span>
+                    <span class="number animated-counter" data-target="2000">0</span>
                     <span class="label">basic literacy trained beneficiaries</span>
                 </div>
                 <div class="stat">
-                    <span class="number">300+</span>
+                    <span class="number animated-counter" data-target="300">0</span>
                     <span class="label">skilled trained beneficiaries</span>
                 </div>
                 <div class="stat">
-                    <span class="number">10+</span>
+                    <span class="number animated-counter" data-target="10">0</span>
                     <span class="label">community partners</span>
                 </div>
                 <div class="stat">
-                    <span class="number">3</span>
+                    <span class="number animated-counter" data-target="3">0</span>
                     <span class="label">years of impact</span>
+                </div>
+            </div>
+        </section>
+        <section class="partnerships">
+            <h2>Our Partners</h2>
+            <div class="partners-logos">
+                <!-- Replace src with your partner logos -->
+                <img src="https://via.placeholder.com/120x60?text=Partner+1" alt="Partner 1 logo">
+                <img src="https://via.placeholder.com/120x60?text=Partner+2" alt="Partner 2 logo">
+                <img src="https://via.placeholder.com/120x60?text=Partner+3" alt="Partner 3 logo">
+                <img src="https://via.placeholder.com/120x60?text=Partner+4" alt="Partner 4 logo">
+            </div>
+        </section>
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonials-list">
+                <div class="testimonial">
+                    <p>“ACTIP’s training changed my life. I now run my own small business online!”</p>
+                    <span class="author">— Sarah, Youth Beneficiary</span>
+                </div>
+                <div class="testimonial">
+                    <p>“Thanks to ACTIP, our community is more digitally connected and empowered.”</p>
+                    <span class="author">— Mr. Okello, Community Leader</span>
+                </div>
+                <div class="testimonial">
+                    <p>“The skills I gained at ACTIP helped me get a job and support my family.”</p>
+                    <span class="author">— John, PWD Beneficiary</span>
                 </div>
             </div>
         </section>
@@ -100,6 +189,30 @@
         </div>
         <script>
             document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+         <script>
+        // Animated Counter Script
+        function animateCounter(el, target, duration = 1800) {
+            let start = 0;
+            let startTime = null;
+            function updateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = Math.min((timestamp - startTime) / duration, 1);
+                el.textContent = Math.floor(progress * (target - start) + start) + (target >= 10 ? '+' : '');
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    el.textContent = target + (target >= 10 ? '+' : '');
+                }
+            }
+            requestAnimationFrame(updateCounter);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.animated-counter');
+            counters.forEach(counter => {
+                animateCounter(counter, parseInt(counter.getAttribute('data-target'), 10));
+            });
+        });
         </script>
     </footer>
 </body>

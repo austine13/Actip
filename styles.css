@@ -6,9 +6,9 @@ body {
     color: #111;
 }
 header {
-    background: #111;
+    background: linear-gradient(90deg, #FFD600 0%, #111 100%);
     color: #FFD600;
-    padding: 0 0 1rem 0;
+    padding: 2.5rem 0 1rem 0;
 }
 .main-nav {
     display: flex;
@@ -105,6 +105,15 @@ section h2 {
     margin-bottom: 1rem;
     border: 2px solid #FFD600;
 }
+
+.intro-text {
+    font-size: 1.18rem;
+    color: #222;
+    margin: 0;
+    line-height: 1.7;
+    text-align: left;
+}
+
 .impact-stats .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -121,9 +130,23 @@ section h2 {
 }
 .impact-stats .number {
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #111;
+    margin-bottom: 0.2rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.impact-stats .number.animated-counter {
+    color: #16150f;
+    text-shadow: 0 2px 8px #FFD60044;
+    font-size: 2.8rem;
+    animation: pop-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes pop-in {
+    0% { transform: scale(0.7); opacity: 0; }
+    80% { transform: scale(1.15); opacity: 1; }
+    100% { transform: scale(1); }
 }
 .impact-stats .label {
     display: block;
@@ -131,6 +154,299 @@ section h2 {
     color: #222;
     margin-top: 0.3rem;
 }
+
+/* Mission Highlights Flip Cards */
+.mission-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.flip-card {
+    background: transparent;
+    width: 270px;
+    height: 260px;
+    perspective: 1200px;
+    cursor: pointer;
+    outline: none;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+    transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(30,40,90,0.07);
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-left: 6px solid #FFD600;
+}
+.flip-card-front {
+    z-index: 2;
+    color: #111;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.flip-card-front .emoji {
+    font-size: 2.2rem;
+    margin-bottom: 0.7rem;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+    color: #222;
+    font-size: 1rem;
+    text-align: left;
+    background: #fffde7;
+    border-left: 6px solid #FFD600;
+}
+.flip-card:focus {
+    box-shadow: 0 0 0 3px #FFD60088;
+}
+@media (max-width: 900px) {
+    .mission-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Partnerships Section */
+.partnerships {
+    margin-bottom: 2.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(30,40,90,0.07);
+    padding: 2rem;
+    border-left: 8px solid #FFD600;
+}
+.partnerships h2 {
+    color: #FFD600;
+    margin-top: 0;
+}
+.partners-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.partners-logos img {
+    background: #fffde7;
+    border-radius: 8px;
+    border: 2px solid #FFD600;
+    padding: 0.5rem 1rem;
+    max-width: 120px;
+    max-height: 60px;
+    box-shadow: 0 1px 4px rgba(30,40,90,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.partners-logos img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(30,40,90,0.15);
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin-bottom: 2.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(30,40,90,0.07);
+    padding: 2rem;
+    border-left: 8px solid #FFD600;
+}
+.testimonials h2 {
+    color: #FFD600;
+    margin-top: 0;
+}
+.testimonials-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+.testimonial {
+    background: #fffde7;
+    border-radius: 8px;
+    border: 2px solid #FFD600;
+    padding: 1.2rem 1.5rem;
+    max-width: 340px;
+    min-width: 220px;
+    box-shadow: 0 1px 4px rgba(30,40,90,0.08);
+    font-style: italic;
+    position: relative;
+}
+.testimonial .author {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #111;
+    font-style: normal;
+    font-size: 1rem;
+}
+@media (max-width: 700px) {
+    .partners-logos, .testimonials-list {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+
+/* Gallery Page Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.gallery-item {
+    background: #fffde7;
+    border: 2px solid #FFD600;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(30,40,90,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(30,40,90,0.15);
+}
+.gallery-item img {
+    max-width: 100%;
+    max-height: 220px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contact Form Modern Styles */
+.contact-section-bg {
+    background: repeating-linear-gradient(135deg, #fffde7 0 40px, #FFD60010 40px 80px);
+    padding: 2.5rem 0;
+}
+.contact-form-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(17,17,17,0.13);
+    max-width: 480px;
+    margin: 2rem auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    position: relative;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+.contact-form label {
+    position: absolute;
+    left: 1.2rem;
+    top: 1.2rem;
+    color: #888;
+    background: #fff;
+    padding: 0 0.3rem;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.2s;
+    opacity: 0.85;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem 1rem 0.6rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    background: transparent;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    margin-bottom: 0.5rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #FFD600;
+    box-shadow: 0 0 0 2px #FFD60033;
+}
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+    top: -0.7rem;
+    left: 0.8rem;
+    font-size: 0.92rem;
+    color: #FFD600;
+    background: #fffde7;
+    opacity: 1;
+}
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.contact-form button[type="submit"] {
+    background: linear-gradient(90deg, #FFD600 0%, #111 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px rgba(30,40,90,0.07);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #111 0%, #FFD600 100%);
+    color: #FFD600;
+    box-shadow: 0 4px 16px rgba(30,40,90,0.15);
+}
+.form-feedback {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #FFD60022;
+    color: #111;
+    font-weight: 500;
+    text-align: center;
+}
+.form-feedback.success {
+    display: block;
+    background: #d4ffb2;
+    color: #1a7e1a;
+}
+.form-feedback.error {
+    display: block;
+    background: #ffd6d6;
+    color: #a11a1a;
+}
+@media (max-width: 600px) {
+    .contact-form-card {
+        padding: 1.2rem 0.5rem;
+    }
+}
+
+/* footer section Styles */
 footer {
     background: #111;
     color: #FFD600;

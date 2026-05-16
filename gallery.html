@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | ACTIP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-btn">Home page</a>
+            <a href="about-us.html" class="nav-btn">About us</a>
+            <a href="gallery.html" class="nav-btn">Gallery</a>
+            <a href="contact-us.html" class="nav-btn">Contact us</a>
+        </nav>
+        <div class="container">
+            <h1>Gallery</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Our Impact in Pictures</h2>
+            <p>Explore moments from our community trainings, empowerment programs, and outreach activities. Add your images below to showcase ACTIP's journey and achievements.</p>
+            <div class="gallery-grid">
+                <!-- Add your images below. Example: -->
+                <div class="gallery-item"><img src="images/Community Training.JPG" alt="Community Training"></div>
+                <div class="gallery-item"><img src="images/Youth Empowerment.JPG" alt="Empowerment Program"></div>
+                <div class="gallery-item"><img src="images/Outreach.JPG" alt="Outreach Activity"></div>
+                <div class="gallery-item"><img src="images/Skills training.JPG" alt="Skills Training"></div>
+                <div class="gallery-item"><img src="images/Youth Training sessions.JPG" alt="Youth Training Sessions"></div>
+                <div class="gallery-item"><img src="images/Partnerships.JPG" alt="Partnerships"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Advancing community impact, training, and partnerships for sustainable development</p>
+                <p><strong>ACTIP</strong> — Empowering communities for a better future.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Contact Info</p>
+                <p>📍 Address: Busia Tiira RD. P.O. BOX 240480 Busia (U)</p>
+                <p>📞 Phone: 0782927654</p>
+                <p>✉ Email: <a href="mailto:actip20@gmail.com">actip20@gmail.com</a></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Social</h3>
+                <div class="social-icons">
+                    <a href="#" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"/></a>
+                    <a href="#" title="Twitter / X" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter / X"/></a>
+                    <a href="#" title="Instagram" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"/></a>
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"/></a>
+                </div>
+            </div>
+            <div class="footer-section legal">
+                <h3>Legal</h3>
+                <p>Registered as a company limited by guarantee and not having a share capital.<br/>
+                Registration Number: 80034745532501</p>
+                <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+                <p>Copyright &copy; <span id="year"></span> ACTIP. All rights reserved.</p>
+            </div>
+        </div>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>

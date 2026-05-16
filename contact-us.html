@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ACTIP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-btn">Home page</a>
+            <a href="about-us.html" class="nav-btn">About us</a>
+            <a href="gallery.html" class="nav-btn">Gallery</a>
+            <a href="contact-us.html" class="nav-btn">Contact us</a>
+        </nav>
+        <div class="container">
+            <h1>Contact Us</h1>
+        </div>
+    </header>
+    <main>
+        <section class="contact-section-bg">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Reach out to us using the contact information below or send us a message using the form.</p>
+            <div class="contact-info">
+                <p><strong>Address:</strong> Busia Tiira RD. P.O. BOX 240480 Busia (U)</p>
+                <p><strong>Phone:</strong> <a href="tel:0782927654">0782927654</a></p>
+                <p><strong>Email:</strong> <a href="mailto:actip20@gmail.com">actip20@gmail.com</a></p>
+            </div>
+            <div class="contact-form-card">
+                <form class="contact-form" action="#" method="post" autocomplete="off" onsubmit="showFeedback(event)">
+                    <div style="position:relative;">
+                        <input type="text" id="name" name="name" required placeholder=" " />
+                        <label for="name">Name</label>
+                    </div>
+                    <div style="position:relative;">
+                        <input type="email" id="email" name="email" required placeholder=" " />
+                        <label for="email">Email</label>
+                    </div>
+                    <div style="position:relative;">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit">Send Message</button>
+                    <div class="form-feedback success" id="form-success">Thank you! Your message has been sent.</div>
+                    <div class="form-feedback error" id="form-error">Oops! Something went wrong. Please try again.</div>
+                </form>
+            </div>
+            <script>
+                function showFeedback(e) {
+                    e.preventDefault();
+                    document.getElementById('form-success').style.display = 'block';
+                    document.getElementById('form-error').style.display = 'none';
+                    setTimeout(function() {
+                        document.getElementById('form-success').style.display = 'none';
+                    }, 3500);
+                    e.target.reset();
+                }
+            </script>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-section about">
+                <h3>About</h3>
+                <p>Advancing community impact, training, and partnerships for sustainable development</p>
+                <p><strong>ACTIP</strong> — Empowering communities for a better future.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Contact Info</p>
+                <p>📍 Address: Busia Tiira RD. P.O. BOX 240480 Busia (U)</p>
+                <p>📞 Phone: 0782927654</p>
+                <p>✉ Email: <a href="mailto:actip20@gmail.com">actip20@gmail.com</a></p>
+            </div>
+            <div class="footer-section social">
+                <h3>Social</h3>
+                <div class="social-icons">
+                    <a href="#" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"/></a>
+                    <a href="#" title="Twitter / X" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter / X"/></a>
+                    <a href="#" title="Instagram" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"/></a>
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"/></a>
+                </div>
+            </div>
+            <div class="footer-section legal">
+                <h3>Legal</h3>
+                <p>Registered as a company limited by guarantee and not having a share capital.<br/>
+                Registration Number: 80034745532501</p>
+                <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+                <p>Copyright &copy; <span id="year"></span> ACTIP. All rights reserved.</p>
+            </div>
+        </div>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+</body>
+</html>
