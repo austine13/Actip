@@ -17,11 +17,7 @@
             <div class="header-gradient-overlay"></div>
             <div class="header-content">
                 <div class="header-flex">
-                    <a href="index.html" class="logo-link">
-                        <span class="logo-gradient-wrap">
-                            <img src="Images/ACTIP.png" alt="ACTIP logo" class="logo">
-                        </span>
-                    </a>
+                    <a href="index.html" class="logo-link"><img src="Images/Logo.png" alt="ACTIP logo" class="logo"></a>
                     <nav class="main-nav">
                         <a href="index.html" class="nav-btn">Home page</a>
                         <a href="about.html" class="nav-btn">About us</a>
@@ -30,25 +26,11 @@
                     </nav>
                 </div>
                 <div class="container">
-                    <h1>ACTIP</h1>
-                    <p class="subtitle">African Center of Technologies for Inclusive Participation Initiative Limited</p>
-                    <p class="tagline">Advancing community impact, training, and partnerships for sustainable development.</p>
+                    <h1>African Center of Technologies for Inclusive Participation Initiative Limited</h1>
+                    <h2>Advancing community impact, training, and partnerships for sustainable development.</h2>
                 </div>
             </div>
         </div>
-        <script>
-        // Simple slideshow for header background
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide-img');
-        function showSlides() {
-            slides.forEach((img, i) => {
-                img.classList.remove('active');
-                if (i === slideIndex) img.classList.add('active');
-            });
-            slideIndex = (slideIndex + 1) % slides.length;
-        }
-        setInterval(showSlides, 3500);
-        </script>
     </header>
     <main>
         <section class="intro-section">
@@ -162,10 +144,10 @@
             <h2>Our Partners</h2>
             <div class="partners-logos">
                 <!-- Replace src with your partner logos -->
-                <img src="https://via.placeholder.com/120x60?text=Partner+1" alt="Partner 1 logo">
-                <img src="https://via.placeholder.com/120x60?text=Partner+2" alt="Partner 2 logo">
-                <img src="https://via.placeholder.com/120x60?text=Partner+3" alt="Partner 3 logo">
-                <img src="https://via.placeholder.com/120x60?text=Partner+4" alt="Partner 4 logo">
+                <img src="Images/BHCK.jfif" alt="British High Commission Kampala logo">
+                <img src="Images/Cross border.jfif" alt="Busia WomenCross Border logo">
+                <img src="Images/Uganda.jfif" alt="Uganda logo">
+                <img src="Images/Partner4.jfif" alt="Partner 4 logo">
             </div>
         </section>
         <section class="testimonials">
@@ -219,6 +201,19 @@
         </div>
         <script>
             document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+         <script>
+        // Simple slideshow for header background
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-img');
+        function showSlides() {
+            slides.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === slideIndex) img.classList.add('active');
+            });
+            slideIndex = (slideIndex + 1) % slides.length;
+        }
+        setInterval(showSlides, 3500);
         </script>
          <script>
         // Animated Counter Script
